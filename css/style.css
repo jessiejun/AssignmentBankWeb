@@ -1,0 +1,439 @@
+/*customized stylesheet by Jun Ge Oct.2015*/
+
+
+p,h1,h2,h3,h4,h5,h6,button,form, span {
+    font-family: 'Raleway', sans-serif;
+    color: #111111;
+}
+
+a,body {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+
+.inlinelink {
+    color: #E79F7C;
+    text-decoration: underline;
+}
+
+.inlinelink:hover {
+    color: #E79F7C;
+    font-weight: 600;
+}
+
+.inlinelink:focus, .inlinelink:visited {
+    color: #111111;
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.graybg {
+    background-color: rgba(50, 50, 50, 0.4);
+    border-bottom: 1px solid darkgrey;
+}
+
+.generalheader {
+    z-index: 99999;
+    height: 60px;
+    opacity: 80%;
+    -webkit-box-shadow: 0 0 5px rgba(50, 50, 50, 0);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.whitelink {
+    color: #fff;
+    font-size: 14px;
+    padding: 0 3px 0 1px;
+    -webkit-transition: padding 0.5s;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.whitelink:hover {
+    color: #fff;
+    padding: 0 2px 0 2px;
+    font-weight: 600;
+
+}
+
+
+.header-center {
+    line-height: 60px;
+}
+
+.headelement {
+    height: 60px;
+    position: relative;
+    text-align: center;
+}
+
+.centeroutbox {
+    position: relative;
+    text-align: center;
+}
+
+.bigbutton{
+    margin: 15px;
+}
+
+#headerlogin {
+    position:absolute;
+    display: inline-block;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: auto;
+    height:30px;
+    width:80px;
+    background-color: rgba(221, 140, 103, 0);
+    border: 1px solid rgba(221, 140, 103, 1);
+    font-size: 13px;
+    color: #fff;
+    -webkit-transition: background-color 0.5s;
+}
+
+#headerlogin:hover {
+    background-color: rgba(50, 50, 50, 0.2);
+    font-weight: 600;
+}
+
+
+#headersignup {
+    position:absolute;
+    display: inline-block;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: auto;
+    height:30px;
+    width:80px;
+    background-color: rgba(221, 140, 103, 1);
+    border: 1px solid rgba(221, 140, 103, 1);
+    font-size: 13px;
+    color: #EEEEEE;
+    -webkit-transition: background-color 0.5s;
+}
+
+#headersignup:hover {
+    background-color: rgba(229, 127, 81, 1);
+    font-weight: 600;
+}
+
+#headerbuttonbox {
+    float: right;
+    height: 60px;
+}
+
+.titletext {
+    text-align: center;
+    letter-spacing: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5em;
+
+    color: #ffffff;
+}
+
+
+body {
+
+}
+
+.titleimg {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.mainbigbutton {
+    width: 250px;
+    height: 50px;
+    margin-top:30%;
+    margin-bottom: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    background-color: rgba(221, 140, 103, 1);
+    border: 1px solid rgba(221, 140, 103, 1);
+    font-size: 18px;
+    color: #EEEEEE;
+    -webkit-transition: background-color 0.5s;
+    -webkit-box-shadow: 0 0 5px rgba(50, 50, 50, 45);
+}
+
+.mainbigbutton:hover {
+    background-color: rgba(229, 127, 81, 1);
+    border: 1px solid rgba(229, 127, 81, 1);
+    color: #EEEEEE;
+}
+
+.mainbigbutton:active:focus {
+    background-color: rgba(229, 127, 81, 1);
+    border: 1px solid rgba(229, 127, 81, 1);
+    color: #EEEEEE;
+}
+
+
+
+.bigbutton {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.halfimg {
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+
+.bigblockwobg {
+
+}
+
+.button-social,
+.button-social:focus,
+.button-social.active:focus,
+.button-social:visited,
+.button-social.active,
+.button-social:active,
+.button-social.is-active{
+    background-color: rgba(221, 140, 103, 1);
+    color: #ffffff;
+    margin: 20px;
+}
+
+.button-social:hover {
+    background-color: rgba(229, 127, 81, 1);
+    color: #ffffff;
+}
+
+.button-longshadow,
+.button-longshadow-right {
+    overflow: hidden;
+}
+.button-longshadow.button-social,
+.button-longshadow-right.button-social {
+    text-shadow: 0px 0px #B67859, 1px 1px #B67859, 2px 2px #B67859, 3px 3px #B67859, 4px 4px #B67859, 5px 5px #B67859, 6px 6px #B67859, 7px 7px #B67859, 8px 8px #B67859, 9px 9px #B67859, 10px 10px #B67859, 11px 11px #B67859, 12px 12px #B67859, 13px 13px #B67859, 14px 14px #B67859, 15px 15px #B67859, 16px 16px #B67859, 17px 17px #B67859, 18px 18px #B67859, 19px 19px #B67859, 20px 20px #B67859, 21px 21px #B67859, 22px 22px #B67859, 23px 23px #B67859, 24px 24px #B67859, 25px 25px #B67859, 26px 26px #B67859, 27px 27px #B67859, 28px 28px #B67859, 29px 29px #B67859, 30px 30px #B67859, 31px 31px #B67859, 32px 32px #B67859, 33px 33px #B67859, 34px 34px #B67859, 35px 35px #B67859, 36px 36px #B67859, 37px 37px #B67859, 38px 38px #B67859, 39px 39px #B67859, 40px 40px #B67859, 41px 41px #B67859, 42px 42px #B67859, 43px 43px #B67859, 44px 44px #B67859, 45px 45px #B67859, 46px 46px #B67859, 47px 47px #B67859, 48px 48px #B67859, 49px 49px #B67859, 50px 50px #B67859, 51px 51px #B67859, 52px 52px #B67859, 53px 53px #B67859, 54px 54px #B67859, 55px 55px #B67859, 56px 56px #B67859, 57px 57px #B67859, 58px 58px #B67859, 59px 59px #B67859, 60px 60px #B67859, 61px 61px #B67859, 62px 62px #B67859, 63px 63px #B67859, 64px 64px #B67859, 65px 65px #B67859, 66px 66px #B67859, 67px 67px #B67859, 68px 68px #B67859, 69px 69px #B67859, 70px 70px #B67859, 71px 71px #B67859, 72px 72px #B67859, 73px 73px #B67859, 74px 74px #B67859, 75px 75px #B67859, 76px 76px #B67859, 77px 77px #B67859, 78px 78px #B67859, 79px 79px #B67859, 80px 80px #B67859, 81px 81px #B67859, 82px 82px #B67859, 83px 83px #B67859, 84px 84px #B67859, 85px 85px #B67859; }
+.button-longshadow.button-social:active, .button-longshadow.button-social.active, .button-longshadow.button-social.is-active,
+.button-longshadow-right.button-social:active,
+.button-longshadow-right.button-social.active,
+.button-longshadow-right.button-social.is-active {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
+
+.horizontalline {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 0;
+    border-top: 1px solid #777777;
+}
+
+.img-button,
+.img-button:focus,
+.img-button.active:focus,
+.img-button.is-active:focus,
+.img-button:visited,
+.img-button.active,
+.img-button:active,
+.img-button.is-active {
+    left: 0;
+    right: 0;
+
+    margin-top:60%;
+    margin-bottom: 20%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+    background-color: rgba(221, 140, 103, 1);
+    color: #ffffff;
+
+    -webkit-transition: background-color 0.5s;
+
+}
+
+.img-button:hover {
+    background-color: rgba(229, 127, 81, 1);
+    border: 1px solid rgba(229, 127, 81, 1);
+    color: #EEEEEE;
+}
+
+.filtertab {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 2px rgba(30,30,30,0.5);
+    color: white;
+}
+
+.filtertab > a > p {
+    color: white;
+    font-size: 20px;
+    margin-top: 10%
+}
+
+.filtertab:hover > a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.filtertab:hover {
+    color: white;
+    -webkit-box-shadow: 0 0 5px rgba(50,50,50,0.65);
+}
+
+.widefilter {
+    margin: auto;
+    width: 100%;
+    height: 33%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.hide {
+    opacity: 0;
+    height: 0;
+}
+
+figcaption {
+    color: white;
+}
+
+/*
+.filtergrade {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+*/
+
+
+.gradebutton {
+    -webkit-box-shadow: 0 0 2px rgba(30,30,30,0.5);
+    margin: 10%;
+}
+
+.gradebutton:active,
+.gradebutton:focus,
+.gradebutton:visited,
+.gradebutton.active:focus,
+.gradebutton.is-active,
+.gradebutton.is-active:focus {
+    -webkit-box-shadow: 0 0 5px rgba(50,50,50,0.65);
+}
+
+.fullwidth {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.modulebutton {
+    -webkit-box-shadow: 0 0 2px rgba(30,30,30,0.5);
+    margin: 10%;
+    width: 85%;
+}
+
+.margin15 {
+     margin-top: 15px;
+     margin-bottom: 15px;
+ }
+
+.margin30{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.btn-middle-align {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-box-shadow: 0 0 5px #777777;
+    width: 80%;
+}
+
+.orangebg {
+    background-color: rgba(229,127,81,1);
+}
+
+.padding2 {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.whitecolor {
+    color: white;
+}
+
+.introtextbox {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    font-size: 16px;
+}
+
+.padding5 {
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.padding7 {
+    padding-bottom: 7%;
+    padding-top: 7%;
+}
+
+.introtext {
+    color: white;
+    line-height: 1.5;
+}
+
+.socialsignup {
+    color: white;
+    width: 200px;
+    margin: 10px 0 10px 0;
+}

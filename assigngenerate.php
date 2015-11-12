@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment Generator</title>
+
+    <!--Bootstrap files-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/buttons.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery-ui.structure.css" rel="stylesheet">
+    <link href="css/jquery-ui.theme.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    [endif]-->
+</head>
+<body style="background-image: url(./img/background.jpg);
+    background-repeat: repeat;">
+    <!--header of the main page-->
+    <header class="graybg"  style="background-image: url(./img/backgroundinverse.jpg);
+    background-repeat: repeat;">
+
+        <div class="row">
+            <div class="col-md-2 col-sm-2 col-xs-2 headelement">
+                <a href="assignadd.html" class="header-center whitelink">ADD ASSISNMENT</a>
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-8 headelement">
+                <p class="titletext header-center">ASSIGNMENT BANK</p>
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-1 headelement">
+                <a class="btn btn-default" href="#" role="button" id="headersignup">SIGN UP</a>
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-1 headelement">
+                <a class="btn btn-default" href="#" role="button" id="headerlogin">LOG IN</a>
+            </div>
+        </div>
+
+    </header>
+
+    <section id="customize">
+
+        <!--select subject-->
+        <div class="container text-center" id="subject">
+            <h2 id="subjecttitle">Click Filter to Choose Your Subject</h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="filtertab" style="background-color: #FF7A7A">
+                        <a class="filterlink" style="display: inline">
+                            <figure class="filterimg">
+                                <img src="img/mathematical4.png" class="img-responsive halfimg" >
+                                <figcaption>Mathematics</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="filtertab" style="background-color: #FFD57A">
+                        <a class="filterlink" style="display: inline">
+                            <figure class="filterimg">
+                                <img src="img/einstein2.png" class="img-responsive halfimg">
+                                <figcaption class="text-center">Physics</figcaption>
+                            </figure>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="filtertab" style="background-color: #7AD8FF">
+                        <a class="filterlink" style="display: inline">
+                            <figure class="filterimg">
+                                <img src="img/chemistry29.png" class="img-responsive halfimg">
+                                <figcaption class="text-center">Chemistry</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="filtertab" style="background-color: #7AFFE1">
+                        <a class="center-block filterlink">
+                            <figure class="filterimg">
+                                <img src="img/dna20.png" class="img-responsive halfimg">
+                                <figcaption class="text-center">Biology</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="filtertab" style="background-color: #A5F7A1">
+                        <a class="filterlink" style="display: inline">
+                            <figure class="filterimg">
+                                <img src="img/literature.png" class="img-responsive halfimg">
+                                <figcaption class="text-center">Literature</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="filtertab" style="background-color: #FF9250">
+                        <a class="filterlink" style="display: inline">
+                            <figure class="filterimg">
+                                <img src="img/art.png" class="img-responsive halfimg">
+                                <figcaption class="text-center">Art</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="filtertab" style="background-color: #F16EA7">
+                        <a class="filterlink" style="display: inline">
+                            <figure class="filterimg">
+                                <img src="img/history4.png" class="img-responsive halfimg">
+                                <figcaption class="text-center">History</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- select assignment grade-->
+        <div class="container text-center hide" id="grade">
+            <div class="row text-center" id="gradetitle">
+                <h2>Click Filter to Choose Level</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                        <button class="button button-royal button-circle button-giant button-longshadow-right gradebutton">
+                            6th Grade
+                        </button>
+
+                    </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                        <button class="button button-caution button-circle button-giant button-longshadow-right gradebutton">
+                            7th Grade
+                        </button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                        <button class="button button-highlight button-circle button-giant button-longshadow-right gradebutton">
+                            8th Grade
+                        </button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                        <button class="button button-action button-circle button-giant button-longshadow-right gradebutton">
+                            9th Grade
+                        </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- select assignment module -->
+        <div class="container text-center hide" id="module">
+            <div class="row text-center" id="moduletitle">
+                <h2>Click Filter to Choose Module</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <button class="button button-royal button-3d button-rounded button-giant modulebutton">
+                        Geometry
+                    </button>
+
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <button class="button button-caution button-3d button-rounded button-giant modulebutton">
+                        Algebra
+                    </button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <button class="button button-highlight button-3d button-rounded button-giant modulebutton">
+                          AMC
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- selection assignment difficulty -->
+        <div class="container text-center hide margin15" id="difficulty">
+            <div class="row">
+                <div class="col-md-3 col-sm-2 hidden-xs">
+
+                </div>
+                <div class="col-md-6 col-sm-8 col-xs-12">
+                    <p class="margin15">
+                        <label for="amount" style="font-size: 24px">Choose Assignment Difficulty Level (1-10):</label>
+                        <br>
+                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;" class="text-center">
+                    </p>
+                    <div id="slider-range"></div>
+                    <button class="button button-3d button-primary button-pill margin30" id="generatorbtn" style="">Generate Assignment  <i class="fa fa-chevron-circle-right"></i></button>
+                </div>
+                <div class="col-md-3 col-sm-2 hidden-xs">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="problemstable" class="hide">
+        <div class="container">
+            <div class="center-block">
+                <h2>Generated Assignment</h2>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-4" style="height: 60px;">
+                        <a class="button button-rounded button-small button-raised btn-middle-align" id="reset">Reset Filters</a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4" style="height: 60px;">
+                        <a class="button button-rounded button-small button-primary button-raised btn-middle-align" id="sendtostudent">Send to Student</a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4" style="height: 60px;">
+                        <a class="button button-rounded button-small button-highlight button-raised btn-middle-align" id="editassign">Edit Questions</a>
+                    </div>
+                </div>
+
+                <p class="text-center margin30">10 questions are generated randomly from Assignment Bank. You can edit the questions before pushing to students.</p>
+            </div>
+            <div id="showproblem"><b></b></div>
+        </div>
+    </section>
+
+
+    <footer class="graybg">
+        <div class="container">
+
+            <div style="margin: 50px">
+                <h2>Contact Our Team On</h2>
+            </div>
+
+            <div class="horizontalline">
+            </div>
+
+            <div class="text-center" style="margin: 50px">
+                <button class="button button-circle button-jumbo button-social button-longshadow">
+                    <i class="fa fa-facebook fa-text"></i>
+                </button>
+                <button class="button button-circle button-jumbo button-social button-longshadow">
+                    <i class="fa fa-google-plus fa-text"></i>
+                </button>
+                <button class="button button-circle button-jumbo button-social button-longshadow">
+                    <i class="fa fa-twitter fa-text"></i>
+                </button>
+                <button class="button button-circle button-jumbo button-social button-longshadow">
+                    <i class="fa fa-instagram fa-text"></i>
+                </button>
+                <button class="button button-circle button-jumbo button-social button-longshadow">
+                    <i class="fa fa-linkedin fa-text"></i>
+                </button>
+
+            </div>
+
+        </div>
+        <div class="text-center" style="margin-bottom: 30px">
+            <p>Jun Ge.® All Rights Reserved. 2015</p>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or includes individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- general onpageload js for assignment bank-->
+    <script src="js/generalapp.js"></script>
+</body>
+
+
+
+</html>
