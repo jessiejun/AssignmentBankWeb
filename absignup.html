@@ -16,46 +16,65 @@
 
 </head>
 <body class="orangebg">
-    <section>
+    <section id="signuptitle">
         <div class="container text-center">
-            <img src="./img/abanklogwithstroke.png" class="img-responsiveon">
+            <img src="./img/abanklogwithstroke.png" class="img-responsiveon" style="width:30%">
+        </div>
+        <div class="text-center">
+            <p class="smtitlewhite">Sign up and start your work by using assignment bank!</p>
         </div>
     </section>
 
     <section id="signup">
-        <div>
-            <p>Sign up and start your work by using assignment bank!</p>
-        </div>
+
         <!--signup form -->
         <form id="signupform" action="" method="post">
-            <div class="container">
+            <div class="container" style="position:relative">
                 <div id="socialsignup">
-                    <!-- google & facebook signup-->
-                    <p>Sign up faster. We don't post on Facebook or Google+.</p>
-                    <button class="button button-primary button-rounded button-blocko socialsignup" id="fbsignup">
-                        <i class="fa fa-facebook"></i>         connect
-                    </button>
-                    <button class="button button-caution button-rounded button-block socialsignup" id="googlesignup">
-                        <i class="fa fa-google"></i>        connect
-                    </button>
+                    <div id="buttongroup">
+                        <!-- google & facebook signup-->
+                        <p style="color:white">Sign up faster.<br> We don't post on Facebook or Google+.</p>
+                        <div>
+                            <button class="button button-primary button-rounded socialsignup" id="fbsignup">
+                                <i class="fa fa-facebook"></i>         connect
+                            </button>
+                        </div>
+                        <div>
+                            <button class="button button-caution button-rounded socialsignup" id="googlesignup">
+                                <i class="fa fa-google"></i>        connect
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div id="or">
-                    or
+                <div id="or" style="font-size: 10px">
+                    OR
                 </div>
                 <div id="emailsignup">
                     <div class="row">
                         <label for="firstname">
                             Name
                         </label>
-                        <div id="fninput">
+                        <div id="fninput" class="inputfield" style="width: 50%">
                             <input type="text" name="firstname" id="firstname" placeholder="First Name" maxlength="20" class="signupinput">
                         </div>
-                        <div id="lninput">
+                        <div id="lninput" class="inputfield" style="width: 50%">
                             <input type="text" name="lastname" id="lastname" placeholder="Last Name" maxlength="20" class="signupinput">
                         </div>
                     </div>
                     <div class="row">
-                        <
+                        <label for="subject1">
+                            Subject
+                        </label>
+                        <div id="s1input" class="inputfield" style="width: 100%">
+                            <input type="text" name="subject1" id="subject1" placeholder="Subject 1" maxlength="50" class="signupinput">
+                        </div>
+                        <div id="s2input" class="inputfield" style="width: 100%">
+                            <input type="text" name="subject2" id="subject2" placeholder="Subject 2 (optional)" maxlegnth="50" class="signupinput">
+                        </div>
+                        <div id="s2input" class="inputfield" style="width: 100%">
+                            <input type="text" name="subject2" id="subject2" placeholder="Subject 2 (optional)" maxlegnth="50" class="signupinput">
+                        </div>
+
                     </div>
                 </div>
 

@@ -48,7 +48,7 @@ h2 {
 .generalheader {
     z-index: 99999;
     height: 60px;
-    opacity: 80%;
+    opacity: 0.8;
     -webkit-box-shadow: 0 0 5px rgba(50, 50, 50, 0);
     position: absolute;
     left: 0px;
@@ -436,4 +436,76 @@ figcaption {
     color: white;
     width: 200px;
     margin: 10px 0 10px 0;
+}
+
+#signuptitle {
+    margin: 5% 0 5% 0;
+}
+
+.smtitlewhite {
+    color: #ffffff;
+    font-size: 32px
+}
+
+#socialsignup {
+    position:absolute;
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+}
+
+#buttongroup {
+    float: right;
+    width: 75%;
+}
+
+#or {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    color: white;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 8px;
+    background-color: rgb(229, 127, 81);
+}
+
+#emailsignup {
+    float: right;
+    width: 50%;
+    border-left: 1px solid #ffffff;
+    padding: 20px;
+}
+
+.inputfield {
+    display: inline;
+}
+
+#emailsignup label {
+    display: block;
+    color: #ffffff;
+}
+
+#emailsignup .row {
+    margin-bottom: 5px;
+}
+
+#firstname,
+#lastname {
+    width: 40%;
+}
+
+#subject1,
+#subject2,
+#subject3 {
+    width: 82%;
+}
+
+.signupinput {
+    margin-bottom: 8px;
+    /*margin-bottom: 10px;*/
 }
