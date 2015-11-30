@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 
     /*function for smooth scroll down*/
-    $('a[href*=#]').click(function() {
+    $('a[href*=#]').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var $target = $(this.hash);
             $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
     /*function for change grade filter status*/
     $(".gradebutton").click (function () {
-        if (gradefilter < 1){
+        if (gradefilter < 1) {
             gradefilter += 1;
             $("#gradetitle").toggleClass("hide");
             $(".gradebutton").not(this).parent().toggleClass("col-md-3 col-sm-3 col-xs-6");
@@ -76,57 +76,53 @@ $(document).ready(function() {
             // code for IE6, IE5
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xmlhttp.onreadystatechange = function() {
+        xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 document.getElementById("showproblem").innerHTML = xmlhttp.responseText;
             }
         }
-        xmlhttp.open("POST","review.php");
+        xmlhttp.open("POST", "review.php");
         xmlhttp.send();
 
-        $("body").on("click",".deleterow",function () {
+        $("body").on("click", ".deleterow", function () {
             $(this).parent().parent().remove();
         });
 
     });
 
     /*range slider function jQuery UI */
-    $(function() {
-        $( "#slider-range" ).slider({
+    $(function () {
+        $("#slider-range").slider({
             range: true,
             min: 0,
             max: 10,
             step: 1,
-            values: [ 2, 5 ],
-            slide: function( event, ui ) {
-                $( "#amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+            values: [2, 5],
+            slide: function (event, ui) {
+                $("#amount").val(ui.values[0] + " - " + ui.values[1]);
             }
         });
-        $( "#amount" ).val(  $( "#slider-range" ).slider( "values", 0 ) +
-            " - " + $( "#slider-range" ).slider( "values", 1 ) );
+        $("#amount").val($("#slider-range").slider("values", 0) +
+            " - " + $("#slider-range").slider("values", 1));
     });
 
     /* function to delete a row from assignment*/
 
 
     /*function to reset filters*/
-    $("#reset").click(function() {
+    $("#reset").click(function () {
         subjectfilter = 0;
         gradefilter = 0;
         modulefilter = 0;
 
-       location.reload();
+        location.reload();
     });
 
     /*function to start edit questions*/
 
-    $("#editassign").on('click',function() {
+    $("#editassign").on('click', function () {
         $(".deleterow").toggleClass("hide");
     });
-
-
-
-
 
 
 });

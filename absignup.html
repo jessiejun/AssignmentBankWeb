@@ -66,13 +66,13 @@
                             Email
                         </label>
                         <div id="emailinput" class="" style="width: 100%; display: block">
-                            <input type="text" name="email" id="email" placeholder="Email Address" maxlength="50" class="signupinput">
+                            <input type="email" name="email" id="email" placeholder="Email Address" maxlength="50" class="signupinput">
                         </div>
                         <div id="pwd" class="inputfield" style="width: 100%">
-                            <input type="text" name="pwd" id="password" placeholder="Password" maxlength="50" class="signupinput">
+                            <input type="password" name="pwd" id="password" placeholder="Password" maxlength="50" class="signupinput">
                         </div>
                         <div id="pwd2" class="inputfield" style="width: 100%">
-                            <input type="text" name="pwd2" id="password2" placeholder="Password Re-enter" maxlength="50" class="signupinput">
+                            <input type="password" name="pwd2" id="password2" placeholder="Password Re-enter" maxlength="50" class="signupinput">
                         </div>
                     </div>
                     <div class="row">
@@ -90,7 +90,8 @@
                         </div>
 
                     </div>
-                    <button class="btn btn-default" id="signupsubmit">SIGN UP</button>
+                    <div id="signupnoti"></div>
+                    <input class="btn btn-default" id="signupsubmit" type="button" value="SIGN UP" onclick="signup()">
                 </div>
 
             </div>
@@ -104,6 +105,15 @@
 
 
 
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or includes individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- general onpageload js for assignment bank-->
+    <script src="js/generalapp.js"></script>
+    <!-- general onpageload js for assignment bank-->
+    <script src="js/signup.js"></script>
 </body>
 </html>

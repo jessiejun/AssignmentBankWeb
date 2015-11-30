@@ -2,7 +2,7 @@
 <?php
     include ("includes/connect_info.php");
     $connection=mysql_connect($hostname, $mysql_login, $mysql_password);
-    $dbs=mysqli_select_db($database, $connection);
+    $dbs=mysql_select_db($database, $connection);
     $sql = "SELECT * FROM jug264.ab_problem order by rand() limit 10";
     $result = mysql_query($sql);
     echo '<table class="table table-striped">
