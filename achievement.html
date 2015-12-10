@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Achievements and Badges</title>
+
+    <!--Bootstrap files-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/sortable_gallery.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    [endif]-->
+</head>
+<body style="background-image: url(./img/background.jpg);
+    background-repeat: repeat;">
+
+<!--header of the main page-->
+    <header class="generalheader graybg" style="position: relative">
+        <div class="row" style="padding-left: 2%;padding-right: 2%;">
+            <div class="col-md-4 col-sm-4 col-xs-2">
+                <a href="index.html" class="header-center whitelink">HOME</a>
+                <a href="assignadd.html" class="header-center whitelink">EDITOR</a>
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-10">
+                <nav class="navbar navbar-default" role="navigation" style="color: white;">
+                    <div class="navbar-header col-md-6">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-navbar-collapse" aria-expanded="false">
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <p class="navbar-brand title-text" href="#" style="text-align: center;">A BANK</p>
+                    </div>
+                    <div class="navbar-collapse col-md-6 collapse" id="example-navbar-collapse" aria-expanded="false" style="float: right; height: 1px;">
+                        <ul class="nav navbar-nav" style="float: right;">
+                            <li class="active"><a href="absignup.html" class="" id="signupbtn">SIGN UP</a></li>
+                            <li><a href="#">LOG IN</a></li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="badges">
+        <div class="gallery">
+            <div class="sorting">
+                <div>
+                    <span>Filter photos by</span>
+                    <a class="sortlink selected" data-keywords="all" href="#">All categories</a>
+                    <a class="sortlink " data-keywords="achieve" href="#">Achieved</a>
+                    <a class="sortlink " data-keywords="na" href="#">Not Achieved</a>
+                    <a class="sortlink " data-keywords="special" href="#">Special</a>
+                    <a class="sortlink " data-keywords="new" href="#">New</a>
+                    <div class="clear_both"></div>
+                </div>
+
+            </div>
+            <div class="photos">
+                <div class="thumbnail_container">
+                    <a class="thumbnail" title="Achieved in Nov. 2015" href="img/b1_large.png" data-keywords="achieve">
+                        <img src="img/b1_thumb.png">
+                    </a>
+
+                    <a class="thumbnail" title="Send out 100 assignments from our website." href="img/b2_large.png" data-keywords="na special">
+                        <img src="img/b2_thumb.png">
+                    </a>
+
+                    <a class="thumbnail" title="Achieved in Nov. 2015. Special badge for 1 year anniversary of Assignment bank." href="img/b3_large.png" data-keywords="achieve special">
+                        <img src="img/b3_thumb.png">
+                    </a>
+                    <a class="thumbnail" title="Add 10 questions to the bank during Thanksgiving. Special badge for Thanksgivie 2015." href="img/b4_large.png" data-keywords="na special">
+                        <img src="img/b4_thumb.png">
+                    </a>
+                    <a class="thumbnail" title="Use 20 questions from math contest module." href="img/b5_large.png" data-keywords="na">
+                        <img src="img/b5_thumb.png">
+                    </a>
+                    <a class="thumbnail" title="Use 20 questions from math contest module with difficulty level 8 and up. Badge for AMC 2015." href="img/b6_large.png" data-keywords="na special">
+                        <img src="img/b6_thumb.png">
+                    </a>
+                    <a class="thumbnail" title="Achieved in Nov. 2015" href="img/b7_large.png" data-keywords="achieve">
+                        <img src="img/b7_thumb.png">
+                    </a>
+                    <a class="thumbnail" title="Use 20 questions from math contest module with difficulty level 8 and up. Badge for AMC 2015." href="img/b8_large.png" data-keywords="na new">
+                        <img src="img/b8_thumb.png">
+                    </a>
+                    <a class="thumbnail" title="Use 20 questions from math contest module with difficulty level 8 and up. Badge for AMC 2015." href="img/b9_large.png" data-keywords="na new">
+                        <img src="img/b9_thumb.png">
+                    </a>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+    </section>
+    <footer class="graybg">
+        <div class="container">
+
+            <div style="margin: 50px">
+                <h2>Contact Our Team On</h2>
+            </div>
+
+            <div class="horizontalline">
+            </div>
+
+            <div class="text-center" style="margin: 50px">
+                <button class="button button-circle button-jumbo button-social button-longshadow">
+                    <i class="fa fa-facebook fa-text"></i>
+                </button>
+                <button class="button button-circle button-jumbo button-social button-longshadow">
+                    <i class="fa fa-google-plus fa-text"></i>
+                </button>
+                <button class="button button-circle button-jumbo button-social button-longshadow">
+                    <i class="fa fa-twitter fa-text"></i>
+                </button>
+                <button class="button button-circle button-jumbo button-social button-longshadow">
+                    <i class="fa fa-instagram fa-text"></i>
+                </button>
+                <button class="button button-circle button-jumbo button-social button-longshadow">
+                    <i class="fa fa-linkedin fa-text"></i>
+                </button>
+
+            </div>
+
+        </div>
+        <div class="text-center" style="margin-bottom: 30px">
+            <p>Jun Ge.® All Rights Reserved. 2015</p>
+        </div>
+    </footer>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/sortable_gallery.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+
+
+</body>
+</html>

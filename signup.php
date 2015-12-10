@@ -45,8 +45,9 @@
                                     if ($sbj1 == null) {
                                         echo "<p>" . "You should fill in at least one subject you are instructing." . "</p>";
                                     } else {
-                                        $cryptpass = crypt($pwd1);
+                                        $cryptpass = MD5($pwd1);
                                         $insert1 = mysql_query("INSERT INTO jug264.ab_usertb (firstname, lastname, email, password, subject1, subject2, subject3) VALUES ('$fn', '$ln', '$email', '$cryptpass', '$sbj1', '$sbj2', '$sbj3' ) ");
+                                        echo json_encode(true);
                                     }
                                 }
                             }

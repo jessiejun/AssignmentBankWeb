@@ -16,14 +16,43 @@ function signup() {
         method: "POST",
         url: "./signup.php",
         data: "firstn=" + fn + "&lastn=" + ln + "&emailadd=" + emadd + "&password=" + pwd + "&password2=" + pwd2 + "&subject1=" + sbj1 + "&subject2=" + sbj2 + "&subject3=" + sbj3,
-        success: function (html) {
-            if (html == 'true') {
+        success: function (data) {
+            if (data == 'true') {
 
                 console.log("success");
+                window.location.href="index.html"
             }
             else {
-                $('#signupnoti').html(html);
+                $('#signupnoti').html(data);
                 console.log("fail");
+            }
+        }
+    });
+    return false;
+}
+
+function login() {
+    var emalogin = $('#email_li').val();
+    var pwdlogin = $('#password_li').val();
+
+
+
+    console.log("ajaxstart");
+    $.ajax ({
+
+        method: "POST",
+        url: "./login.php",
+        data: "emailadd=" + emalogin + "&password=" + pwdlogin,
+        success: function (data) {
+            if (data == 'true') {
+
+                console.log("success");
+                window.location.href="index.html"
+            }
+            else {
+                $('#signupnoti').html(data);
+                console.log("fail");
+                console.log(data);
             }
         }
     });

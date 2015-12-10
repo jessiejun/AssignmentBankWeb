@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log In to Assignment Bank</title>
+
+    <!--Bootstrap files-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body class="orangebg">
+<section id="signuptitle">
+    <div class="container text-center">
+        <img src="./img/abanklogwithstroke.png" class="img-responsiveon" style="width:30%">
+    </div>
+    <div class="text-center">
+        <p class="smtitlewhite">Log in to your account and continue creating amazing assignments.</p>
+    </div>
+</section>
+
+<section id="signup">
+
+    <!--signup form -->
+    <form id="signupform" action="" method="post">
+        <div class="container" style="position:relative">
+            <div id="socialsignup">
+                <div id="buttongroup">
+                    <!-- google & facebook signup-->
+                    <p style="color:white">Log in.<br> We don't post on Facebook or Google+.</p>
+                    <div>
+                        <button class="button button-primary button-rounded socialsignup" id="fbsignup">
+                            <i class="fa fa-facebook"></i>         connect
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button button-caution button-rounded socialsignup" id="googlesignup">
+                            <i class="fa fa-google"></i>        connect
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="or" style="font-size: 10px">
+                OR
+            </div>
+
+            <div id="emaillogin">
+                <div class="row">
+                    <label for="emailsign">
+                        Email
+                    </label>
+                    <div id="emailsign" class="" style="width: 75%; display: block">
+                        <input type="email" name="email" id="email_li" placeholder="Email Address" maxlength="50" class="signupinput" style="width: 100%">
+                    </div>
+                    <label for="pwdsign">
+                        Password
+                    </label>
+                    <div id="pwdsign" class="inputfield" style="width: 75%; display: block">
+                        <input type="password" name="pwd" id="password_li" placeholder="Password" maxlength="50" class="signupinput" style="width: 100%">
+                    </div>
+                </div>
+                <div id="signupnoti"></div>
+                <input class="btn btn-default" id="loginsubmit" type="button" value="LOG IN" onclick="login()">
+            </div>
+
+        </div>
+    </form>
+
+
+
+</section>
+
+<section>
+    <div class="container text-center">
+        <a class="shiftlogin whitelink" href="absignup.html">New user? Click to sign up.</a>
+    </div>
+</section>
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or includes individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<!-- jQuery UI -->
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<!-- general onpageload js for assignment bank-->
+<script src="js/generalapp.js"></script>
+<!-- general onpageload js for assignment bank-->
+<script src="js/signup.js"></script>
+</body>
+</html>

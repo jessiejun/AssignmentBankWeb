@@ -1,0 +1,146 @@
+/*  CSS Document - lynda.com  */
+body {
+    margin: 0;
+    color: #bd9a1e;
+    background-color: black;
+}
+
+p {
+    margin:0 0 1em 0;
+}
+
+a,
+a:visited {
+
+
+}
+
+.title {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 70px;
+    height: 100%;
+    background: white;
+}
+
+
+.gallery {
+    width: 80%;
+    margin: 0px auto;
+    position: relative;
+}
+
+.gallery .sorting {
+    margin: 0 0 15px 0;
+    border: 1px solid #E57F51;
+    background-color: rgba(50, 50, 50, .3);
+
+}
+
+.gallery .sorting span {
+    padding: 0 20px 0 0 ;
+    color: #E57F51;
+    font-style: italic;
+}
+
+.gallery .sorting div {
+    margin: 10px 0 10px 10px;
+}
+
+.gallery .sorting a {
+    color: white;
+    font-size: .85em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 3px 20px 3px 20px;
+    background: url('../img/check_normal.gif') no-repeat 0px 3px;
+}
+
+.gallery .sorting a:hover {
+    color: #E57F51;
+}
+
+.gallery .sorting a.selected {
+    color: #E57F51;
+    background: url(../img/check_selected.gif) no-repeat 0 3px;
+}
+
+.gallery .photos .thumbnail_container {
+    position: relative;
+
+
+}
+
+.gallery .photos .thumbnail_container a.thumbnail {
+    position: absolute;
+}
+
+.gallery .photos .thumbnail_container a.thumbnail img {
+    width: 75px;
+    height: 75px;
+    border: 1px solid #E57F51;
+}
+
+.clear_both {
+    clear: both;
+    line-height: 1px;
+}
+
+
+
+/*responsive*/
+
+@media screen and (min-height:50px) and (max-height:520px) {
+
+
+}
+@media screen and (min-height:521px) and (max-height:700px) {
+
+
+}
+@media screen and (min-height:701px) {
+
+
+}
+
+@media screen and (min-width:50px) and (max-width:500px) {
+    body {
+        padding: 5px 0 0 5px;
+    }
+    .gallery {
+        width: auto;
+    }
+    .gallery .sorting span {
+        display: block;
+        color: #E57F51;
+        padding: 0 0 20px 0;
+    }
+    .gallery .sorting a {
+        display: block;
+    }
+
+}
+@media screen and (min-width:501px) and (max-width:960px) {
+    .gallery .sorting span {
+        display: block;
+        padding: 0 0 20px 0;
+    }
+    .gallery .sorting a {
+        display: block;
+        width: 35%;
+        float: left;
+        margin-bottom: 5px;
+    }
+
+}
+@media screen and (min-width:961px) {
+    .gallery .sorting span {
+        padding: 0 20px 0 0;
+    }
+
+}
+
+#badges {
+    margin: 30px;
+}

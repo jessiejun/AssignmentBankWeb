@@ -124,6 +124,19 @@ $(document).ready(function() {
         $(".deleterow").toggleClass("hide");
     });
 
+    /*function to shift between signup and login (Use two pages to replace this function)*/
+/*    $(".shiftlogin").click(function() {
+        $("#emailsignup").toggleClass("hidden");
+        $("#emaillogin").toggleClass("hidden");
+        $('.shiftlogin').toggleClass("hidden");
+    })*/
+
+    $('#fbsignup').click(function() {
+        alert("This function will be opening soon.")
+    })
+    $('#googlesignup').click(function() {
+        alert("This function will be opening soon.")
+    })
 
 });
 
