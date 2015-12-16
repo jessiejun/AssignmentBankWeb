@@ -133,10 +133,223 @@ $(document).ready(function() {
 
     $('#fbsignup').click(function() {
         alert("This function will be opening soon.")
-    })
+    });
     $('#googlesignup').click(function() {
         alert("This function will be opening soon.")
-    })
+    });
+
+    /*check to show form*/
+    $('#checkmultiple').click(function() {
+        if($(this).is(':checked'))
+        {
+            alert('checked');
+            $('.option').removeClass('hide');
+            checkmultiple = 0;
+        }
+        else {
+            alert('unchecked');
+            $('.option').addClass('hide');
+            checkmultiple = 1;
+        }
+    });
+
+    /* question preview */
+
+    $('#previewbtn').click(function() {
+        questioncontent = $('#questionarea').val();
+        option1 = $('#optA').val();
+        option2 = $('#optB').val();
+        option3 = $('#optC').val();
+        option4 = $('#optD').val();
+        multiple = $('#checkmultiple').is(':checked');
+        correctid = $('input[name="option"]:checked').val();
+        subjectid = $('#subjectopt option:selected').val();
+        subjecttext = $('#subjectopt option:selected').text();
+        gradeid = $('#gradeopt option:selected').val();
+        moduleid = $('#moduleopt option:selected').val();
+        moduletext = $('#moduleopt option:selected').text();
+
+        console.log(questioncontent);
+        console.log(option1);
+        console.log(option2);
+        console.log(option3);
+        console.log(option4);
+        console.log(multiple);
+        console.log(correctid);
+        console.log(subjectid);
+        console.log(subjecttext);
+        console.log(gradeid);
+        console.log(moduletext);
+
+
+        if(!questioncontent) {
+            $('#questionarea').addClass('fillfail');
+        }
+        if(questioncontent) {
+            $('#questionarea').removeClass('fillfail');
+        }
+        if(multiple) {
+            if (!option1) {
+                $('#optA').addClass('fillfail');
+            }
+            else {
+                $('#optA').removeClass('fillfail');
+            }
+            if (!option2) {
+                $('#optB').addClass('fillfail');
+            }
+            else {
+                $('#optB').removeClass('fillfail');
+            }
+            if (!option3) {
+                $('#optC').addClass('fillfail');
+            }
+            else {
+                $('#optC').removeClass('fillfail');
+            }
+            if (!option4) {
+                $('#optD').addClass('fillfail');
+            }
+            else {
+                $('#optD').removeClass('fillfail');
+            }
+            if (!correctid) {
+                $('#correct').children('.fillnoti').removeClass('hide');
+            }
+            else {
+                $('#correct').children('.fillnoti').addClass('hide');
+            }
+            if (subjectid == 0) {
+                $('#subjectopt').next('.fillnoti').removeClass('hide');
+            }
+            else {
+                $('#subjectopt').next('.fillnoti').addClass('hide');
+            }
+            if (gradeid == 0) {
+                $('#gradeopt').next('.fillnoti').removeClass('hide');
+            }
+            else {
+                $('#gradeopt').next('.fillnoti').addClass('hide');
+            }
+            if (moduleid == 0) {
+                $('#moduleopt').next('.fillnoti').removeClass('hide');
+            }
+            else {
+                $('#moduleopt').next('.fillnoti').addClass('hide');
+            }
+
+            if (questioncontent && option1 && option2 && option3 && option4 && correctid && subjectid != 0 && gradeid != 0 && moduleid != 0) {
+                $('#pvquestion').text(questioncontent);
+                $('#pvopt1').text(option1);
+                $('#pvopt2').text(option2);
+                $('#pvopt3').text(option3);
+                $('#pvopt4').text(option4);
+                $('#pvsubject').text(subjecttext);
+                $('#pvgrade').text(gradeid + 'th grade');
+                $('#pvmodule').text(moduletext);
+                switch (correctid) {
+                    case 'a':
+                        $('#pvopt1').addClass('rightanswer');
+                        break;
+                    case 'b':
+                        $('#pvopt2').addClass('rightanswer');
+                        break;
+                    case 'c':
+                        $('#pvopt3').addClass('rightanswer');
+                        break;
+                    case 'd':
+                        $('#pvopt4').addClass('rightanswer');
+                        break;
+                }
+            }
+        }
+        else if (!multiple) {
+            if (subjectid == 0) {
+                $('#subjectopt').next('.fillnoti').removeClass('hide');
+            }
+            else {
+                $('#subjectopt').next('.fillnoti').addClass('hide');
+            }
+            if (gradeid == 0) {
+                $('#gradeopt').next('.fillnoti').removeClass('hide');
+            }
+            else {
+                $('#gradeopt').next('.fillnoti').addClass('hide');
+            }
+            if (moduleid == 0) {
+                $('#moduleopt').next('.fillnoti').removeClass('hide');
+            }
+            else {
+                $('#moduleopt').next('.fillnoti').addClass('hide');
+            }
+            if (questioncontent && subjectid!=0 && gradeid!=0 &&moduleid!=0) {
+                $('#pvquestion').text(questioncontent);
+                $('#pvsubject').text(subjecttext);
+                $('#pvgrade').text(gradeid + 'th grade');
+                $('#pvmodule').text(moduletext);
+            }
+        }
+
+
+
+
+
+
+    });
+
+    $('#addbtn').click(function() {
+
+
+        if (multiple) {
+            console.log('addquestionajaxmultiple');
+
+            $.ajax ({
+
+                method: "POST",
+                url: "./addquestion.php",
+                data: "check="+checkmultiple+"&question="+questioncontent+"&opt1="+option1+"&opt2="+option2+"&opt3="+option3+"&opt4="+option4+"&ca="+correctid+"&subject="+subjectid+"&grade="+gradeid+"&module="+moduletext,
+                success: function (data) {
+                    if (data == 'true') {
+
+                        console.log("success");
+
+                    }
+                    else {
+                        console.log("fail");
+                        console.log(checkmultiple);
+                    }
+                }
+            });
+            return false;
+        }
+
+        else if (!multiple) {
+            console.log('addquestionajaxopen');
+            $.ajax ({
+
+                method: "POST",
+                url: "./addquestion.php",
+                data: "check="+checkmultiple+"&question="+questioncontent+"&subject="+subjectid+"&grade="+gradeid+"&module="+moduletext,
+                success: function (data) {
+                    if (data == 'true') {
+
+                        console.log("success");
+
+                    }
+                    else {
+
+                        console.log("fail");
+                        console.log(checkmultiple);
+                    }
+                }
+            });
+            return false;
+        }
+
+    });
+
+    $("#datepicker").datepicker({minDate:0, maxDate: "+24M"});
+
 
 });
 

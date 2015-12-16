@@ -9,8 +9,11 @@
     <!--Bootstrap files-->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -74,11 +77,158 @@
 
     </header>-->
 
-    <section>
+    <section id="addassign">
         <div class="container text-center">
             <p style="margin: 50px;background-color: #FFFFFF;">Thank you for your interest in AssignmentBank.<br>This functionality is under construction and will be published soon.<br>You can first <a class="inlinelink" href="assigngenerate.html">generate the assignment</a>  using current questions and <a class="inlinelink" href="index.html">check information</a>  about our product and team. </p>
         </div>
+        <div class="container">
+            <form id="addquestion" method="post">
+                <fieldset>
+                    <div>
+                        <p class="text-center" style="font-size: 20px; margin-top: 20px; margin-bottom: 20px">Add Your Questions to the Bank</p>
+                    </div>
 
+                    <div id="option" class="row">
+                        <div class="col-md-1 col-sm-1 hidden-xs">
+
+                        </div>
+                        <div class="col-md-10 col-sm-10 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6 col-xs-12">
+                                    <p>Question Content</p>
+                                </div>
+                                <div class="col-md-5 col-sm-1 col-xs-12">
+
+                                </div>
+                                <div class="col-md-4 col-sm-5 col-xs-12">
+                                    <input type="checkbox" name="questionname" value="Multiple-Choice" id="checkmultiple"> <span class="checkboxtext">This is a multiple choice question.</span><br>
+                                </div>
+                                <textarea rows="4" cols="50" form="addquestion" placeholder="type in your question here" id="questionarea" maxlength="1000"></textarea>
+                            </div>
+
+                            <div class="row option hide">
+                                <div class="col-md-4 col-sm-6 col-xs-8">
+                                    <p>Answer Options</p>
+                                    <label for="optA" class="opt">Option A</label>
+                                    <input type="text" name="optiona" id="optA" maxlength="100"><br>
+                                    <label for="optB" class="opt">Option B</label>
+                                    <input type="text" name="optionb" id="optB" maxlength="100"><br>
+                                    <label for="optC" class="opt">Option C</label>
+                                    <input type="text" name="optionc" id="optC" maxlength="100"><br>
+                                    <label for="optD" class="opt">Option D</label>
+                                    <input type="text" name="optiond" id="optD" maxlength="100"><br>
+                                </div>
+                                <div class="col-md-4 col-sm-2 col-xs-1">
+
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-3">
+                                    <p id="correct">Correct Answer<span class="fillnoti hide">  !</span></p>
+                                    <input type="radio" name="option" value="a1"><br>
+                                    <input type="radio" name="option" value="a2"><br>
+                                    <input type="radio" name="option" value="a3"><br>
+                                    <input type="radio" name="option" value="a4"><br>
+                                </div>
+                            </div>
+
+                            <div class="row selectmenu">
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <label for="subjectopt">Select a Subject</label>
+                                    <select name="subject" id="subjectopt">
+                                        <option value="0">Subject</option>
+                                        <option value="1">Mathematics</option>
+                                        <option value="2">Physics</option>
+                                        <option value="3">Chemistry</option>
+                                        <option value="4">Biology</option>
+                                        <option value="5">Literature</option>
+                                        <option value="6">Art</option>
+                                        <option value="8">History</option>
+                                    </select>
+                                    <span class="fillnoti hide">!</span>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <label for="gradeopt">Select a Grade</label>
+                                    <select name="grade" id="gradeopt">
+                                        <option value="0">Grade</option>
+                                        <option value='6'>6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <span class="fillnoti hide">!</span>
+
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <label for="moduleopt">Select a Module</label>
+                                    <select name="module" id="moduleopt">
+                                        <option value="0">Module</option>
+                                        <option value="1">Module1</option>
+                                        <option value="2">Module2</option>
+                                        <option value="3">Module3</option>
+                                    </select>
+                                    <span class="fillnoti hide">!</span>
+                                </div>
+
+                            </div>
+                            <div class="row datapicker">
+                                <p>Expiration Date: <input type="text" id="datepicker"><span>This question will be automatically removed from question bank at expiration date.</span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-sm-1 hidden-xs">
+
+                        </div>
+
+
+                    </div>
+                    <div class="text-center row">
+                        <a type="button" class="button-action" id="previewbtn">Preview</a>
+                    </div>
+
+                </fieldset>
+
+            </form>
+        </div>
+
+    </section>
+
+    <section id="preview">
+        <div class="container">
+            <div class="text-center">
+                <p>Question Preview</p>
+            </div>
+            <div class="row">
+                <div class="col-md-1 col-sm-1 hidden-xs">
+
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-12">
+                    <div id="previewfield">
+                        <div id="pvcontent">
+                            <p>Question</p><br>
+                            <p id="pvquestion"></p>
+                        </div><br>
+                        <div id="pvoption">
+                            <p id="pvopt1"></p>
+                            <p id="pvopt2"></p>
+                            <p id="pvopt3"></p>
+                            <p id="pvopt4"></p>
+                        </div>
+                        <div id="pvselect">
+                            <p id="pvsubject"></p>
+                            <p id="pvgrade"></p>
+                            <p id="pvmodule"></p>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="text-center row">
+                <a type="button" class="button-action" id="addbtn">Preview</a>
+            </div>
+        </div>
     </section>
 
     <footer class="graybg">
@@ -115,6 +265,16 @@
             <p>Jun Ge.® All Rights Reserved. 2015</p>
         </div>
     </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or includes individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- general onpageload js for assignment bank-->
+    <script src="js/generalapp.js"></script>
+
 
 </body>
 </html>
