@@ -18,7 +18,10 @@
 <body class="orangebg">
 <section id="signuptitle">
     <div class="container text-center">
-        <img src="./img/abanklogwithstroke.png" class="img-responsiveon" style="width:30%">
+        <a class="clickimg">
+            <img src="./img/abanklogwithstroke.png" class="img-responsiveon" style="width:30%">
+        </a>
+
     </div>
     <div class="text-center">
         <p class="smtitlewhite">Log in to your account and continue creating amazing assignments.</p>
@@ -55,13 +58,13 @@
                     <label for="emailsign">
                         Email
                     </label>
-                    <div id="emailsign" class="" style="width: 75%; display: block">
+                    <div id="emailsign" class="">
                         <input type="email" name="email" id="email_li" placeholder="Email Address" maxlength="50" class="signupinput" style="width: 100%">
                     </div>
                     <label for="pwdsign">
                         Password
                     </label>
-                    <div id="pwdsign" class="inputfield" style="width: 75%; display: block">
+                    <div id="pwdsign" class="inputfield">
                         <input type="password" name="pwd" id="password_li" placeholder="Password" maxlength="50" class="signupinput" style="width: 100%">
                     </div>
                 </div>
@@ -82,10 +85,8 @@
     </div>
 </section>
 
-
-
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
 <!-- Include all compiled plugins (below), or includes individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <!-- jQuery UI -->
@@ -95,4 +96,5 @@
 <!-- general onpageload js for assignment bank-->
 <script src="js/signup.js"></script>
 </body>
+
 </html>

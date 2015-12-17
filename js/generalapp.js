@@ -17,7 +17,6 @@ $(document).ready(function() {
         }
     });
 
-
     /*filter functions*/
 
     var subjectfilter = 0;
@@ -139,6 +138,7 @@ $(document).ready(function() {
     });
 
     /*check to show form*/
+    checkmultiple = 1;
     $('#checkmultiple').click(function() {
         if($(this).is(':checked'))
         {
@@ -168,6 +168,7 @@ $(document).ready(function() {
         gradeid = $('#gradeopt option:selected').val();
         moduleid = $('#moduleopt option:selected').val();
         moduletext = $('#moduleopt option:selected').text();
+        dateexp = $('#datepicker').val();
 
         console.log(questioncontent);
         console.log(option1);
@@ -180,6 +181,7 @@ $(document).ready(function() {
         console.log(subjecttext);
         console.log(gradeid);
         console.log(moduletext);
+        console.log(dateexp);
 
 
         if(!questioncontent) {
@@ -244,23 +246,28 @@ $(document).ready(function() {
                 $('#pvopt2').text(option2);
                 $('#pvopt3').text(option3);
                 $('#pvopt4').text(option4);
+                $('#previewfield').removeClass('hide');
+                $('#pvoption').removeClass('hide');
                 $('#pvsubject').text(subjecttext);
                 $('#pvgrade').text(gradeid + 'th grade');
                 $('#pvmodule').text(moduletext);
+                $('#expiredate').text(dateexp);
+
                 switch (correctid) {
-                    case 'a':
+                    case 'a1':
                         $('#pvopt1').addClass('rightanswer');
                         break;
-                    case 'b':
+                    case 'a2':
                         $('#pvopt2').addClass('rightanswer');
                         break;
-                    case 'c':
+                    case 'a3':
                         $('#pvopt3').addClass('rightanswer');
                         break;
-                    case 'd':
+                    case 'a4':
                         $('#pvopt4').addClass('rightanswer');
                         break;
                 }
+                $("#addtobank").removeClass("hide");
             }
         }
         else if (!multiple) {
@@ -287,6 +294,12 @@ $(document).ready(function() {
                 $('#pvsubject').text(subjecttext);
                 $('#pvgrade').text(gradeid + 'th grade');
                 $('#pvmodule').text(moduletext);
+                $('#expiredate').text(dateexp);
+                $('#pvoption').addClass('hide');
+                $('#previewfield').removeClass('hide');
+
+
+                $("#addtobank").removeClass("hide");
             }
         }
 
@@ -297,21 +310,36 @@ $(document).ready(function() {
 
     });
 
+
+    /*add question to bank ajax*/
     $('#addbtn').click(function() {
 
 
         if (multiple) {
             console.log('addquestionajaxmultiple');
+            $('#questionarea').val('');
+            $('#optA').val('');
+            $('#optB').val('');
+            $('#optC').val('');
+            $('#optD').val('');
+            $('input[name="option"]').prop('checked', false);
+            $('select option:first-child').attr('selected', 'selected');
+
 
             $.ajax ({
 
                 method: "POST",
                 url: "./addquestion.php",
-                data: "check="+checkmultiple+"&question="+questioncontent+"&opt1="+option1+"&opt2="+option2+"&opt3="+option3+"&opt4="+option4+"&ca="+correctid+"&subject="+subjectid+"&grade="+gradeid+"&module="+moduletext,
+                beforeSend: function() {
+                    $('#successnoti').html('<p>Adding your question to the bank...... Please wait for a few seconds</p>')
+
+                },data: "check="+checkmultiple+"&question="+questioncontent+"&opt1="+option1+"&opt2="+option2+"&opt3="+option3+"&opt4="+option4+"&ca="+correctid+"&subject="+subjectid+"&grade="+gradeid+"&module="+moduletext+"&expdate="+dateexp,
+
                 success: function (data) {
                     if (data == 'true') {
 
                         console.log("success");
+                        $('#successnoti').html('<p>Your question has been successfully uploaded to the Assignment Bank!<br> You can add more questions or click <a href="../ab/assigngenerate.html">here</a>to generate assignment.</p>')
 
                     }
                     else {
@@ -325,15 +353,24 @@ $(document).ready(function() {
 
         else if (!multiple) {
             console.log('addquestionajaxopen');
+            $('#questionarea').val('');
+            $('input[name="option"]').prop('checked', false);
+            $('select option:first-child').attr('selected', 'selected');
             $.ajax ({
 
                 method: "POST",
                 url: "./addquestion.php",
-                data: "check="+checkmultiple+"&question="+questioncontent+"&subject="+subjectid+"&grade="+gradeid+"&module="+moduletext,
+                data: "check="+checkmultiple+"&question="+questioncontent+"&subject="+subjectid+"&grade="+gradeid+"&module="+moduletext+"&expdate="+dateexp,
+                beforeSend: function() {
+                    $('#successnoti').html('<p>Adding your question to the bank...... Please wait for a few seconds</p>')
+
+                },
                 success: function (data) {
                     if (data == 'true') {
 
                         console.log("success");
+                        $('#successnoti').html('<p>Your question has been successfully uploaded to the Assignment Bank!<br> You can add more questions or click <a href="../ab/assigngenerate.html">here</a>to generate assignment.</p>')
+
 
                     }
                     else {
@@ -342,6 +379,7 @@ $(document).ready(function() {
                         console.log(checkmultiple);
                     }
                 }
+
             });
             return false;
         }
@@ -349,6 +387,11 @@ $(document).ready(function() {
     });
 
     $("#datepicker").datepicker({minDate:0, maxDate: "+24M"});
+
+    /*title image link*/
+    $('.clickimg').click (function() {
+        window.location.href="../ab/index.html";
+    });
 
 
 });

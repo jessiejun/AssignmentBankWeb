@@ -32,7 +32,7 @@
          <div class="row" style="padding-left: 2%;padding-right: 2%;">
             <div class="col-md-4 col-sm-4 col-xs-2">
                 <a href="index.html" class="header-center whitelink">HOME</a>
-                <a href="assignadd.html" class="header-center whitelink">EDITOR</a>
+                <a href="assigngenerate.html" class="header-center whitelink">GENERATOR</a>
             </div>
             <div class="col-md-8 col-sm-8 col-xs-10">
                 <nav class="navbar navbar-default" role="navigation" style="color: white;">
@@ -47,8 +47,8 @@
                     </div>
                     <div class="navbar-collapse col-md-6 collapse" id="example-navbar-collapse" aria-expanded="false" style="float: right; height: 1px;">
                         <ul class="nav navbar-nav" style="float: right;">
-                            <li class="active"><a href="#" class="" id="">SIGN UP</a></li>
-                            <li><a href="#">LOG IN</a></li>
+                            <li class="active"><a href="absignup.html" class="" id="">SIGN UP</a></li>
+                            <li><a href="ablogin.html">LOG IN</a></li>
 
                         </ul>
                     </div>
@@ -78,12 +78,9 @@
     </header>-->
 
     <section id="addassign">
-        <div class="container text-center">
-            <p style="margin: 50px;background-color: #FFFFFF;">Thank you for your interest in AssignmentBank.<br>This functionality is under construction and will be published soon.<br>You can first <a class="inlinelink" href="assigngenerate.html">generate the assignment</a>  using current questions and <a class="inlinelink" href="index.html">check information</a>  about our product and team. </p>
-        </div>
         <div class="container">
             <form id="addquestion" method="post">
-                <fieldset>
+                <fieldset style="min-width: 100%">
                     <div>
                         <p class="text-center" style="font-size: 20px; margin-top: 20px; margin-bottom: 20px">Add Your Questions to the Bank</p>
                     </div>
@@ -172,8 +169,10 @@
                                 </div>
 
                             </div>
-                            <div class="row datapicker">
-                                <p>Expiration Date: <input type="text" id="datepicker"><span>This question will be automatically removed from question bank at expiration date.</span></p>
+                            <div class="row datepicker">
+                                <p>Expiration Date: <input type="text" id="datepicker"><br>
+                                    <span style="font-size: 0.7em">This question will be automatically removed from question bank at expiration date. If you don't select an expiration date, this question will not be removed. </span>
+                                </p>
                             </div>
                         </div>
                         <div class="col-md-1 col-sm-1 hidden-xs">
@@ -183,7 +182,7 @@
 
                     </div>
                     <div class="text-center row">
-                        <a type="button" class="button-action" id="previewbtn">Preview</a>
+                        <a type="button" class="button button-raised button-highlight button-pill" id="previewbtn">Preview</a>
                     </div>
 
                 </fieldset>
@@ -196,28 +195,55 @@
     <section id="preview">
         <div class="container">
             <div class="text-center">
-                <p>Question Preview</p>
+                <p style="font-size: 20px; margin-bottom: 20px; margin-top: 20px">Question Preview</p>
             </div>
             <div class="row">
                 <div class="col-md-1 col-sm-1 hidden-xs">
 
                 </div>
                 <div class="col-md-10 col-sm-10 col-xs-12">
-                    <div id="previewfield">
+                    <div id="previewfield" class="hide">
                         <div id="pvcontent">
-                            <p>Question</p><br>
-                            <p id="pvquestion"></p>
+                            <p class="pvtitle">
+                                Question:
+                                <span id="pvquestion" class="pvtext"></span>
+                            </p>
                         </div><br>
                         <div id="pvoption">
-                            <p id="pvopt1"></p>
-                            <p id="pvopt2"></p>
-                            <p id="pvopt3"></p>
-                            <p id="pvopt4"></p>
+                            <p class="pvtitle">
+                                Option 1:
+                                <span id="pvopt1" class="pvtext"></span>
+                            </p>
+                            <p class="pvtitle">
+                                Option 2:
+                                <span id="pvopt2" class="pvtext"></span>
+                            </p>
+                            <p class="pvtitle">
+                                Option 3:
+                                <span id="pvopt3" class="pvtext"></span>
+                            </p>
+                            <p class="pvtitle">
+                                Option 4:
+                                <span id="pvopt4" class="pvtext"></span>
+                            </p>
                         </div>
                         <div id="pvselect">
-                            <p id="pvsubject"></p>
-                            <p id="pvgrade"></p>
-                            <p id="pvmodule"></p>
+                            <p class="pvtitle">
+                                Subject:
+                                <span id="pvsubject" class="pvtext"></span>
+                            </p>
+                            <p class="pvtitle">
+                                Grade:
+                                <span id="pvgrade" class="pvtext"></span>
+                            </p>
+                            <p class="pvtitle">
+                                Module:
+                                <span id="pvmodule" class="pvtext"></span>
+                            </p>
+                            <p class="pvtitle">
+                                Expiration Date:
+                                <span id="expiredate" class="pvtext"></span>
+                            </p>
                         </div>
 
 
@@ -225,9 +251,13 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center row">
-                <a type="button" class="button-action" id="addbtn">Preview</a>
+            <div class="text-center row hide" id="addtobank">
+                <a type="button" class="button button-raised button-highlight button-pill" id="addbtn">Add to Bank</a>
+                <div id="successnoti"></div>
+
             </div>
+
+
         </div>
     </section>
 

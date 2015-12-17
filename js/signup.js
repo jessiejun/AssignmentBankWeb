@@ -20,7 +20,7 @@ function signup() {
             if (data == 'true') {
 
                 console.log("success");
-                window.location.href="index.html"
+                window.location.href="../index.html"
             }
             else {
                 $('#signupnoti').html(data);
@@ -45,9 +45,8 @@ function login() {
         data: "emailadd=" + emalogin + "&password=" + pwdlogin,
         success: function (data) {
             if (data == 'true') {
-
                 console.log("success");
-                window.location.href="index.html"
+                window.location.href="../achievement.html"
             }
             else {
                 $('#signupnoti').html(data);
